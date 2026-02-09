@@ -7,6 +7,8 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,14 +19,14 @@ jobs:
         run: |
           # 1. Fetch public members
           MEMBERS=$(curl -s "https://api.github.com/orgs/$ORG_NAME/members" | jq -r '.[].login')
-          
+
           # 2. Build the HTML string
           MEMBER_HTML=""
           for member in $MEMBERS; do
             MEMBER_HTML+='<a href="https://github.com/'$member'"><img src="https://github.com/'$member'.png" width="60px" alt="'$member'" style="border-radius:50%; margin:2px;"></a> '
           done
 
-          # 3. Define the markers as variables so they don't get swallowed
+          # 3. Define the markers and file
           START_MARKER="<!--members-start-->"
           END_MARKER="<!--members-end-->"
           TARGET_FILE="profile/README.md"
