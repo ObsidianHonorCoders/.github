@@ -1,0 +1,30 @@
+name: Update Organization Members
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch: # Allows you to run it manually for testing
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Update Members
+        uses: moses-it/github-organization-members-action@v1.1
+        with:
+          # This automatically uses the permissions of the action
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          organization: ObsidianHonorCoders
+          # Customize the display (optional)
+          columns_no: 8
+          avatar_size: 100
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "docs: update organization members" || exit 0
+          git push
