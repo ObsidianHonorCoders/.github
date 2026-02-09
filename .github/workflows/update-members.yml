@@ -1,30 +1,38 @@
 name: Update Organization Members
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight
-  workflow_dispatch: # Allows you to run it manually for testing
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update Members
-        uses: moses-it/github-organization-members-action@v1.1
-        with:
-          # This automatically uses the permissions of the action
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          organization: ObsidianHonorCoders
-          # Customize the display (optional)
-          columns_no: 8
-          avatar_size: 100
-
-      - name: Commit changes
+      - name: Fetch Members and Update README
+        env:
+          ORG_NAME: "ObsidianHonorCoders"
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.md
-          git commit -m "docs: update organization members" || exit 0
-          git push
+          # Fetch public members via GitHub API
+          MEMBERS=$(curl -s "https://api.github.com/orgs/$ORG_NAME/members" | jq -r '.[].login')
+          
+          # Build the HTML/Markdown string for avatars
+          MEMBER_HTML=""
+          for member in $MEMBERS; do
+            MEMBER_HTML+='<a href="https://github.com/'$member'"><img src="https://github.com/'$member'.png" width="60px" alt="'$member'" style="border-radius:50%; margin:2px;"></a> '
+          done
+
+          # Use sed to inject the avatars between the markers
+          # We use a temporary file to handle the multiline injection safely
+          sed -i "//,//{ //!{ //!d; }; }" README.md
+          sed -i "//a $MEMBER_HTML" README.md
+
+      - name: Commit and Push
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: GitHub Action
+          author_email: actions@github.com
+          message: "docs: update org members"
+          add: "README.md"
