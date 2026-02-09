@@ -35,4 +35,5 @@ We treat code like a high-performance engine. Here is our Manifesto
 ### 📫 Join the Phalanx
 * **Organization:** [Obsidian Honor Coders](https://github.com/ObsidianHonorCoders)
 <!--members-start-->
+<a href="https://github.com/Calileus"><img src="https://github.com/Calileus.png" width="60px" alt="Calileus" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/Fernando-JAL"><img src="https://github.com/Fernando-JAL.png" width="60px" alt="Fernando-JAL" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/matematik-isto"><img src="https://github.com/matematik-isto.png" width="60px" alt="matematik-isto" style="border-radius:50%; margin:2px;"></a> 
 <!--members-end-->
