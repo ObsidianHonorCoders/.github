@@ -34,3 +34,5 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 ### 📫 Join the Phalanx
 * **Organization:** [Obsidian Honor Coders](https://github.com/ObsidianHonorCoders)
+<!--members-start-->
+<!--members-end-->
