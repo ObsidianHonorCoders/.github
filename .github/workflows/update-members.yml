@@ -15,24 +15,37 @@ jobs:
         env:
           ORG_NAME: "ObsidianHonorCoders"
         run: |
-          # Fetch public members via GitHub API
+          # 1. Fetch public members
           MEMBERS=$(curl -s "https://api.github.com/orgs/$ORG_NAME/members" | jq -r '.[].login')
           
-          # Build the HTML/Markdown string for avatars
+          # 2. Build the HTML string
           MEMBER_HTML=""
           for member in $MEMBERS; do
             MEMBER_HTML+='<a href="https://github.com/'$member'"><img src="https://github.com/'$member'.png" width="60px" alt="'$member'" style="border-radius:50%; margin:2px;"></a> '
           done
 
-          # Use sed to inject the avatars between the markers
-          # We use a temporary file to handle the multiline injection safely
-          sed -i "//,//{ //!{ //!d; }; }" README.md
-          sed -i "//a $MEMBER_HTML" README.md
+          # 3. Define the markers as variables so they don't get swallowed
+          START_MARKER="<!--members-start-->"
+          END_MARKER="<!--members-end-->"
+          TARGET_FILE="profile/README.md"
+
+          # 4. Inject the HTML using the variables
+          sed -i "/$START_MARKER/,/$END_MARKER/{ /$START_MARKER/!{ /$END_MARKER/!d; }; }" "$TARGET_FILE"
+          sed -i "/$START_MARKER/a $MEMBER_HTML" "$TARGET_FILE"
 
       - name: Commit and Push
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: GitHub Action
-          author_email: actions@github.com
-          message: "docs: update org members"
-          add: "README.md"
+        run: |
+          # 1. Configure the identity
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # 2. Stage the specific file
+          git add profile/README.md
+
+          # 3. Only commit if something actually changed
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "[doc] Update OHC organization members"
+            git push
+          fi
