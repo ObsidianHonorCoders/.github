@@ -25,6 +25,8 @@ We treat code like a high-performance engine. Here is our Manifesto
 | **Discipline** | Documentation | We document our scripts so the next warrior can pick up the blade. |
 | **Loyalty** | Peer Review | We protect the main branch like a fortress; no bug passes the gate. |
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
+
 ---
 
 ### 🚀 Active Projects
@@ -33,7 +35,9 @@ We treat code like a high-performance engine. Here is our Manifesto
 ---
 
 ### 📫 Join the Phalanx
-* **Organization:** [Obsidian Honor Coders](https://github.com/ObsidianHonorCoders)
+
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml)
+
 <!--members-start-->
 <a href="https://github.com/Calileus"><img src="https://github.com/Calileus.png" width="60px" alt="Calileus" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/Fernando-JAL"><img src="https://github.com/Fernando-JAL.png" width="60px" alt="Fernando-JAL" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/matematik-isto"><img src="https://github.com/matematik-isto.png" width="60px" alt="matematik-isto" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/oliverquintana"><img src="https://github.com/oliverquintana.png" width="60px" alt="oliverquintana" style="border-radius:50%; margin:2px;"></a> 
 <!--members-end-->
