@@ -1,0 +1,104 @@
+name: Update Top Contributors
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'  # Weekly on Sunday at 6 AM UTC
+  workflow_dispatch:
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch Top Contributors
+        env:
+          ORG_NAME: "ObsidianHonorCoders"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Create a temporary file to store all commits data
+          > all_commits.json
+
+          # Fetch all repositories
+          REPOS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/orgs/$ORG_NAME/repos?per_page=100" | \
+            jq -r '.[].name')
+
+          # For each repo, fetch contributor stats
+          for repo in $REPOS; do
+            echo "Fetching contributors for $repo..."
+            
+            # GitHub's contributor stats endpoint
+            CONTRIBUTORS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$ORG_NAME/$repo/contributors?per_page=100")
+            
+            # Append to our data file
+            echo "$CONTRIBUTORS" | jq -c '.[]' >> all_commits.json
+            
+            # Rate limiting protection
+            sleep 1
+          done
+
+          # Aggregate contributions by author and get top 10
+          TOP_CONTRIBUTORS=$(cat all_commits.json | \
+            jq -s 'group_by(.login) | 
+            map({
+              login: .[0].login,
+              avatar: .[0].avatar_url,
+              profile: .[0].html_url,
+              contributions: map(.contributions) | add
+            }) | 
+            sort_by(.contributions) | 
+            reverse | 
+            .[:10]')
+
+          # Build HTML for top contributors
+          CONTRIBUTORS_HTML=""
+          echo "$TOP_CONTRIBUTORS" | jq -r '.[] | 
+            "<a href=\"\(.profile)\" title=\"\(.login) - \(.contributions) contributions\">" +
+            "<img src=\"\(.avatar)\" width=\"80px\" alt=\"\(.login)\" " +
+            "style=\"border-radius:50%; margin:5px; border:2px solid #f0ad4e;\"></a>"
+          ' | while read -r line; do
+            CONTRIBUTORS_HTML+="$line "
+          done
+
+          # Save to temporary file
+          echo "$CONTRIBUTORS_HTML" > contributors_section.html
+
+          # Define markers
+          START_MARKER="<!--contributors-start-->"
+          END_MARKER="<!--contributors-end-->"
+          TARGET_FILE="profile/README.md"
+
+          # Check if markers exist, if not add them before members section
+          if ! grep -q "$START_MARKER" "$TARGET_FILE"; then
+            # Add section before members
+            sed -i "/<!--members-start-->/i ### 🏆 Top Contributors (Last 90 Days)\n\n$START_MARKER\n$END_MARKER\n" "$TARGET_FILE"
+          fi
+
+          # Replace content between markers
+          CONTENT=$(cat contributors_section.html)
+          sed -i "/$START_MARKER/,/$END_MARKER/{ 
+            /$START_MARKER/!{ 
+              /$END_MARKER/!d
+            }
+          }" "$TARGET_FILE"
+          sed -i "/$START_MARKER/a $CONTENT" "$TARGET_FILE"
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add profile/README.md
+          
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "[doc] Update top contributors"
+            git push
+          fi
