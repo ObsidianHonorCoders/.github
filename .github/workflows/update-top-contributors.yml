@@ -74,12 +74,6 @@ jobs:
           END_MARKER="<!--contributors-end-->"
           TARGET_FILE="profile/README.md"
 
-          # Check if markers exist, if not add them before members section
-          if ! grep -q "$START_MARKER" "$TARGET_FILE"; then
-            # Add section before members
-            sed -i "/<!--members-start-->/i ### 🏆 Top Contributors (Last 90 Days)\n\n$START_MARKER\n$END_MARKER\n" "$TARGET_FILE"
-          fi
-
           # Replace content between markers
           CONTENT=$(cat contributors_section.html)
           sed -i "/$START_MARKER/,/$END_MARKER/{ 
