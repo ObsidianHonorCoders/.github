@@ -87,7 +87,7 @@ jobs:
               /$END_MARKER/!d
             }
           }" "$TARGET_FILE"
-          sed -i "/$START_MARKER/a $CONTENT" "$TARGET_FILE"
+          sed -i "/$START_MARKER/a \\$CONTENT" "$TARGET_FILE"
 
       - name: Commit and Push
         run: |
