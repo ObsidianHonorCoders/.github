@@ -30,14 +30,23 @@ We treat code like a high-performance engine. Here is our Manifesto
 ---
 
 ### 🚀 Active Projects
-* **[Inheritance Chess](https://github.com/ObsidianHonorCoders/inheritance-chess):** A console chess engine built with C++17, focused on clean inheritance patterns and strategic depth.
+
+<!--repos-start-->
+<!--repos-end-->
+
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-recent-repos.yml)
 
 ---
 
-### 📫 Join the Phalanx
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml)
 
-[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml)
+<!--contributors-start-->
+<!--contributors-end-->
+
+### 📫 Join the Phalanx
 
 <!--members-start-->
 <a href="https://github.com/Calileus"><img src="https://github.com/Calileus.png" width="60px" alt="Calileus" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/Fernando-JAL"><img src="https://github.com/Fernando-JAL.png" width="60px" alt="Fernando-JAL" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/matematik-isto"><img src="https://github.com/matematik-isto.png" width="60px" alt="matematik-isto" style="border-radius:50%; margin:2px;"></a> <a href="https://github.com/oliverquintana"><img src="https://github.com/oliverquintana.png" width="60px" alt="oliverquintana" style="border-radius:50%; margin:2px;"></a> 
 <!--members-end-->
+
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml)
