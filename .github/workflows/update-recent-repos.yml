@@ -1,0 +1,71 @@
+name: Update Recent Repositories
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  update-repos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch Recent Repositories
+        env:
+          ORG_NAME: "ObsidianHonorCoders"
+        run: |
+          # Fetch all public repositories sorted by last push date
+          REPOS=$(curl -s "https://api.github.com/orgs/$ORG_NAME/repos?sort=pushed&per_page=10" | \
+            jq -r '.[] | select(.archived == false) | 
+            "| [\(.name)](\(.html_url)) | \(.stargazers_count) ⭐ | \(.updated_at[:10]) | \(.description // "No description") |"')
+
+          # Create the markdown table
+          cat > repos_section.md << 'REPOS_EOF'
+          
+          ### 🚀 Recent Repositories
+
+          | Repository | Stars | Last Updated | Description |
+          |:-----------|:------------|:------|:-------------|
+          REPOS_EOF
+
+          echo "$REPOS" >> repos_section.md
+
+          # Define markers
+          START_MARKER="<!--repos-start-->"
+          END_MARKER="<!--repos-end-->"
+          TARGET_FILE="profile/README.md"
+
+          # Check if markers exist
+          if ! grep -q "$START_MARKER" "$TARGET_FILE"; then
+            echo "Error: $START_MARKER not found in $TARGET_FILE"
+            exit 1
+          fi
+
+          # Replace content between markers
+          awk -v start="$START_MARKER" -v end="$END_MARKER" -v file="repos_section.md" '
+            BEGIN { in_block=0 }
+            $0 ~ start { print; system("cat " file); in_block=1; next }
+            $0 ~ end { in_block=0 }
+            !in_block
+          ' "$TARGET_FILE" > "${TARGET_FILE}.tmp"
+
+          mv "${TARGET_FILE}.tmp" "$TARGET_FILE"
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add profile/README.md
+          
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "[doc] Update recent repositories"
+            git push
+          fi
