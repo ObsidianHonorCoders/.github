@@ -39,11 +39,11 @@ We treat code like a high-performance engine. Here is our Manifesto
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-02-12 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
 <!--repos-end-->
 
-[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-recent-repos.yml)
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-recent-repos.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-recent-repos.yml)
 
 ---
 
-[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-members.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml)
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml)
 
 <!--contributors-start-->
 <!--contributors-end-->
