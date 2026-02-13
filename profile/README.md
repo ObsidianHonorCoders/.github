@@ -43,10 +43,14 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 ---
 
-[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml)
+### 🏆 Top Contributors (Last 90 Days)
 
 <!--contributors-start-->
 <!--contributors-end-->
+
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml)
+
+---
 
 ### 📫 Join the Phalanx
 
