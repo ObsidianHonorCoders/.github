@@ -26,8 +26,6 @@ jobs:
 
           # Create the markdown table
           cat > repos_section.md << 'REPOS_EOF'
-          
-          ### 🚀 Recent Repositories
 
           | Repository | Stars | Last Updated | Description |
           |:-----------|:------------|:------|:-------------|
