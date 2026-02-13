@@ -48,7 +48,7 @@ We treat code like a high-performance engine. Here is our Manifesto
 <!--contributors-start-->
 <!--contributors-end-->
 
-[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-contributors.yml)
+[![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-top-contributors.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-top-contributors.yml)
 
 ---
 
