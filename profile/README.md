@@ -35,10 +35,10 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 | Repository | Stars | Last Updated | Description |
 |:-----------|:------------|:------|:-------------|
-| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-08-10 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
-| [ohc-template-repo](https://github.com/ObsidianHonorCoders/ohc-template-repo) | 1 ⭐ | 2026-08-04 | Template repository for C++ projects using the OHC baseline conventions. |
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-04-22 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
-| [ArithmetOHC](https://github.com/ObsidianHonorCoders/ArithmetOHC) | 0 ⭐ | 2026-03-11 | The official OHC playground for competitive, high-precision arithmetic bot tournaments. |
+| [ArithmetOHC](https://github.com/ObsidianHonorCoders/ArithmetOHC) | 0 ⭐ | 2026-08-11 | The official OHC playground for competitive, high-precision arithmetic bot tournaments. |
+| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-08-11 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
+| [ohc-template-repo](https://github.com/ObsidianHonorCoders/ohc-template-repo) | 1 ⭐ | 2026-08-04 | Template repository for C++ projects using the OHC baseline conventions. |
 <!--repos-end-->
 
 [![Build](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-recent-repos.yml/badge.svg)](https://github.com/ObsidianHonorCoders/.github/actions/workflows/update-recent-repos.yml)
