@@ -35,7 +35,7 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 | Repository | Stars | Last Updated | Description |
 |:-----------|:------------|:------|:-------------|
-| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-08-16 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
+| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-08-17 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-04-22 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
 | [ArithmetOHC](https://github.com/ObsidianHonorCoders/ArithmetOHC) | 0 ⭐ | 2026-08-13 | The official OHC playground for competitive, high-precision arithmetic bot tournaments. |
 | [ohc-template-repo](https://github.com/ObsidianHonorCoders/ohc-template-repo) | 1 ⭐ | 2026-08-04 | Template repository for C++ projects using the OHC baseline conventions. |
