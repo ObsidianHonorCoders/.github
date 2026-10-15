@@ -35,7 +35,7 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 | Repository | Stars | Last Updated | Description |
 |:-----------|:------------|:------|:-------------|
-| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-10-13 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
+| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-10-14 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
 | [adas-perception](https://github.com/ObsidianHonorCoders/adas-perception) | 1 ⭐ | 2026-10-14 | Experimental ADAS perception project exploring YOLO-based object detection, automotive-domain fine-tuning, and reproducible ML evaluation using public driving datasets such as BDD100K. |
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-09-21 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
 | [arithmet-ohc](https://github.com/ObsidianHonorCoders/arithmet-ohc) | 0 ⭐ | 2026-09-15 | The official OHC playground for competitive, high-precision arithmetic bot tournaments. |
