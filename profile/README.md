@@ -35,9 +35,9 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 | Repository | Stars | Last Updated | Description |
 |:-----------|:------------|:------|:-------------|
+| [obsidian_corvids](https://github.com/ObsidianHonorCoders/obsidian_corvids) | 0 ⭐ | 2026-10-18 | A local, Python-based multi-agent executive copilot built with Streamlit and Ollama, featuring dynamic tool-routing for CFO, CISO, CMO, and COO data domains. |
+| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-10-18 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
 | [adas-ml-detection](https://github.com/ObsidianHonorCoders/adas-ml-detection) | 1 ⭐ | 2026-10-18 | Experimental ADAS perception project exploring YOLO-based object detection, automotive-domain fine-tuning, and reproducible ML evaluation using public driving datasets such as BDD100K. |
-| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-10-17 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
-| [obsidian_corvids](https://github.com/ObsidianHonorCoders/obsidian_corvids) | 0 ⭐ | 2026-10-15 | A local, Python-based multi-agent executive copilot built with Streamlit and Ollama, featuring dynamic tool-routing for CFO, CISO, CMO, and COO data domains. |
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-09-21 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
 | [arithmet-ohc](https://github.com/ObsidianHonorCoders/arithmet-ohc) | 0 ⭐ | 2026-09-15 | The official OHC playground for competitive, high-precision arithmetic bot tournaments. |
 | [ohc-template-repo](https://github.com/ObsidianHonorCoders/ohc-template-repo) | 1 ⭐ | 2026-09-11 | Template repository for C++ projects using the OHC baseline conventions. |
