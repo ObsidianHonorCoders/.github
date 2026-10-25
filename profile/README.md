@@ -35,7 +35,7 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 | Repository | Stars | Last Updated | Description |
 |:-----------|:------------|:------|:-------------|
-| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-10-23 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
+| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-10-24 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
 | [adas-ml-detection](https://github.com/ObsidianHonorCoders/adas-ml-detection) | 1 ⭐ | 2026-10-18 | Experimental ADAS perception project exploring YOLO-based object detection, automotive-domain fine-tuning, and reproducible ML evaluation using public driving datasets such as BDD100K. |
 | [obsidian_corvids](https://github.com/ObsidianHonorCoders/obsidian_corvids) | 1 ⭐ | 2026-10-23 | A local, Python-based multi-agent executive copilot built with Streamlit and Ollama, featuring dynamic tool-routing for CFO, CISO, CMO, and COO data domains. |
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-09-21 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
