@@ -35,7 +35,7 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 | Repository | Stars | Last Updated | Description |
 |:-----------|:------------|:------|:-------------|
-| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-11-08 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
+| [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-11-09 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-11-06 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
 | [playwright-python-test-framework](https://github.com/ObsidianHonorCoders/playwright-python-test-framework) | 0 ⭐ | 2026-11-03 | Python + Playwright QA framework for a fictional money transfer app, with pytest, Page Object Model, test reports, and GitHub Actions CI. |
 | [adas-ml-detection](https://github.com/ObsidianHonorCoders/adas-ml-detection) | 1 ⭐ | 2026-10-18 | Experimental ADAS perception project exploring YOLO-based object detection, automotive-domain fine-tuning, and reproducible ML evaluation using public driving datasets such as BDD100K. |
