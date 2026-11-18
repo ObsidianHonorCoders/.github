@@ -35,8 +35,8 @@ We treat code like a high-performance engine. Here is our Manifesto
 
 | Repository | Stars | Last Updated | Description |
 |:-----------|:------------|:------|:-------------|
-| [optinspect-cpp-industrial-vision](https://github.com/ObsidianHonorCoders/optinspect-cpp-industrial-vision) | 0 ⭐ | 2026-11-16 | No description |
 | [.github](https://github.com/ObsidianHonorCoders/.github) | 2 ⭐ | 2026-11-12 | We forge software with the precision of ancient obsidian and the high-revving performance of an overhead cam engine. We don't just ship code; we build machines. |
+| [optinspect-cpp-industrial-vision](https://github.com/ObsidianHonorCoders/optinspect-cpp-industrial-vision) | 0 ⭐ | 2026-11-16 | No description |
 | [obsidian_corvids](https://github.com/ObsidianHonorCoders/obsidian_corvids) | 1 ⭐ | 2026-10-23 | A local, Python-based multi-agent executive copilot built with Streamlit and Ollama, featuring dynamic tool-routing for CFO, CISO, CMO, and COO data domains. |
 | [inheritance-chess](https://github.com/ObsidianHonorCoders/inheritance-chess) | 2 ⭐ | 2026-11-06 | C++ chess engine featuring a polymorphic architecture through class inheritance. |
 | [playwright-python-test-framework](https://github.com/ObsidianHonorCoders/playwright-python-test-framework) | 0 ⭐ | 2026-11-03 | Python + Playwright QA framework for a fictional money transfer app, with pytest, Page Object Model, test reports, and GitHub Actions CI. |
